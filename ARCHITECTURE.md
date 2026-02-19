@@ -4,7 +4,8 @@
 Provide a brief, readable overview of how your chatbot works:
 An Agentic RAG chatbot that answers questions grounded in uploaded PDF documents with citations, writes selective memory to markdown files, supports conversational interaction, and provides safe external tool execution via Open-Meteo weather analysis.
 
-
+## Architecture diagram
+<img src="assets/Architecture.png" width="900" alt="RAG Architecture">
 ---
 
 ## High-Level Flow
