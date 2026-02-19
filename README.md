@@ -46,9 +46,9 @@ You may implement one feature or multiple. Partial implementations are acceptabl
 ---
 
 ## Participant Info (Required)
-- Full Name:
-- Email:
-- GitHub Username:
+- Full Name: Nihal Mallikarjun
+- Email: nihal77778@gmail.com
+- GitHub Username: Nihal7778
 
 ---
 
@@ -246,9 +246,29 @@ Provide exact commands a judge can run.
 Example (replace with your real commands):
 
 ```text
-# install dependencies
-# run the app
-# open UI or run CLI
+# Install dependencies
+pip install -r requirements.txt
+
+# Set up environment
+cp .env.example .env
+# Edit .env → add OPENAI_API_KEY=sk-your-key-here
+
+# Run the app (serves UI at http://localhost:8000)
+uvicorn src.main:app --reload --port 8000
+
+# Run sanity check
+make sanity
+
+# Run evaluation
+make eval
+```
+
+**Spot 2 — Video Walkthrough:**
+
+Replace:
+```
+https://drive.google.com/file/d/1xCL3k6ym-9efe_T14XaQirNXRruPwdUD/view?usp=drivesdk
+
 ```
 
 ---

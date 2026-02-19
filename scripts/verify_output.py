@@ -42,7 +42,6 @@ def main():
     if not isinstance(demo, dict):
         fail("demo must be an object")
 
-    # If Feature A is claimed, enforce citations
     if "A" in feat_set:
         if len(qa) == 0:
             fail("Feature A claimed but qa is empty")
@@ -71,7 +70,6 @@ def main():
                 if not is_non_empty_str(c.get("snippet")):
                     fail(f"qa[{i}].citations[{j}].snippet missing/empty")
 
-    # If Feature B is claimed, require memory writes info
     if "B" in feat_set:
         user_mem = Path("USER_MEMORY.md")
         comp_mem = Path("COMPANY_MEMORY.md")
@@ -82,7 +80,6 @@ def main():
         if not isinstance(mem_writes, list) or len(mem_writes) == 0:
             fail("Feature B claimed but demo.memory_writes is empty")
 
-        # Optional: basic structure checks
         for i, w in enumerate(mem_writes):
             if not isinstance(w, dict):
                 fail(f"demo.memory_writes[{i}] must be an object")
